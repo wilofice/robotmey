@@ -1,0 +1,67 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.3869190319068802 0.3696593205777193 -0.8447755024018284 0.8621358339595343
+  position -3.3579710203024415 1.9200088294276358 1.9423224990044547
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+WoodenBox {
+  translation -0.338437 -0.42382 0.05
+  rotation 0 0 -1 4.692820414042842e-06
+  size 0.1 0.1 0.6
+}
+WoodenBox {
+  translation 1 -1 0.3
+  name "wooden box(1)"
+  size 0.3 0.3 0.6
+}
+E-puck {
+  hidden position_0_0 317.06176864000525
+  hidden position_0_1 405.42295573291585
+  hidden linearVelocity_0 0.04782773309204061 -0.05006711671523677 1.4432378965999828e-08
+  hidden angularVelocity_0 4.040561523881782e-07 1.4116776605663642e-06 1.983587892597033
+  hidden translation_1 0 0.025999999999999978 0.02
+  hidden rotation_1 0 1 0 2.902503281025931
+  hidden linearVelocity_1 0.012074132258617878 -0.012742452925733798 -3.88434369111865e-09
+  hidden angularVelocity_1 0.4533026326949238 0.43474174191695447 1.9845934070753994
+  hidden translation_2 0 -0.026000000000000138 0.02
+  hidden rotation_2 0 1 0 3.299096073422318
+  hidden linearVelocity_2 0.08349324799334082 -0.08750010034368987 5.9131144869508584e-09
+  hidden angularVelocity_2 4.546506347931526 4.332850696346869 2.028625266125466
+  translation 0.2451269253418559 0.40319526996124877 -5.246447694917493e-05
+  rotation -0.0015972229838605535 -0.0011115709529467802 0.9999981066425858 -0.7903897404897391
+  controller "epuck_go_forward"
+}
+Solid {
+  translation -0.8397879993375712 -0.42381793615389857 0.09671263744312368
+  rotation 4.692820414191826e-06 0.9999999999889887 1.6508454507523513e-16 1.2000563161157904
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0 0 7.14195368632564e-11
+}
